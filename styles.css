@@ -847,3 +847,185 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .delivery-grid { grid-template-columns: 1fr; }
   .status-flow { font-size: 0.8rem; gap: 4px; }
 }
+
+/* =====================================================
+   MOTION & ANIMATION SYSTEM
+   ===================================================== */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45); }
+  50% { box-shadow: 0 8px 36px rgba(37, 211, 102, 0.65); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Scroll reveal base */
+.reveal,
+.menu-card,
+.delivery-card,
+.step,
+.about-grid > *,
+.info-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.reveal.is-visible,
+.menu-card.is-visible,
+.delivery-card.is-visible,
+.step.is-visible,
+.about-grid > *.is-visible,
+.info-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance */
+.hero-content {
+  opacity: 0;
+}
+.hero-content.hero-animate {
+  animation: fadeUp 0.9s var(--ease-out) 0.15s forwards;
+}
+.hero-content.hero-animate .hero-badge {
+  animation: scaleIn 0.6s var(--ease-out) 0.35s both;
+}
+.hero-content.hero-animate h1 {
+  animation: fadeUp 0.7s var(--ease-out) 0.45s both;
+}
+.hero-content.hero-animate .hero-sub {
+  animation: fadeUp 0.7s var(--ease-out) 0.55s both;
+}
+.hero-content.hero-animate .hero-ctas {
+  animation: fadeUp 0.7s var(--ease-out) 0.65s both;
+}
+.hero-content.hero-animate .hero-stats {
+  animation: fadeUp 0.7s var(--ease-out) 0.75s both;
+}
+
+/* Floating WhatsApp pulse */
+.floating-whatsapp {
+  animation: pulse-soft 2.8s ease-in-out infinite;
+}
+.floating-whatsapp:hover {
+  animation: none;
+}
+
+/* Card image shine on hover */
+.menu-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.menu-card:hover .menu-card-img::after {
+  opacity: 1;
+  animation: shimmer 0.9s ease;
+}
+
+/* Badge pop */
+.menu-card-badge {
+  transition: transform 0.3s var(--ease-out);
+}
+.menu-card:hover .menu-card-badge {
+  transform: scale(1.06);
+}
+
+/* Add button bounce */
+.add-btn:active {
+  transform: scale(0.9);
+}
+
+/* Pill active glow */
+.pill.active {
+  transition: all 0.3s var(--ease-out);
+}
+
+/* Cart drawer smoother */
+.cart-drawer {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cart-overlay {
+  transition: opacity 0.35s ease, visibility 0.35s;
+}
+
+/* Status flow subtle animation */
+.status-flow span:nth-child(odd) {
+  transition: color 0.3s;
+}
+.delivery-card:hover .status-flow span:nth-child(odd) {
+  color: var(--green);
+}
+
+/* Header logo subtle float */
+.logo .halal-badge {
+  transition: transform 0.4s var(--ease-out);
+}
+.logo:hover .halal-badge {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Button press feedback */
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+.btn-primary:active,
+.btn-whatsapp:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Section headers fade */
+.section-header {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.section-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .menu-card, .delivery-card, .step, .about-grid > *, .info-item,
+  .hero-content, .section-header {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
