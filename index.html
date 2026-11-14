@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halal Chicken Supply | Fresh & Roasted Halal Chicken in Kayunga</title>
+  <meta name="description" content="Order 100% Halal roasted or fresh chicken from Kasangombe-mpunga, Wakiso. Fast delivery around Kayunga & Wakiso. Certified Halal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="halal-badge">حلال</span>
+        <div class="logo-text">
+          <strong>Halal Chicken</strong>
+          <span>Supply</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#menu">Menu</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6h15l-1.5 9h-12z"/>
+            <circle cx="9" cy="20" r="1"/>
+            <circle cx="18" cy="20" r="1"/>
+            <path d="M6 6L4 2H1"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#menu" class="btn btn-primary btn-sm">Order Now</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="halal-badge small">حلال</span>
+        100% Certified Halal
+      </div>
+      <h1>Fresh & Roasted<br><span>Halal Chicken</span></h1>
+      <p class="hero-sub">Order roasted or fresh Halal chicken by the kilo. Delivered hot & fresh across Kayunga and Wakiso.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn btn-primary btn-lg">View Menu & Order</a>
+        <a href="https://wa.me/256705789111" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>5.0</strong>
+          <span>Rating</span>
+        </div>
+        <div class="stat">
+          <strong>Fast</strong>
+          <span>Delivery</span>
+        </div>
+        <div class="stat">
+          <strong>Open</strong>
+          <span>Now</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories strip -->
+  <section class="categories">
+    <div class="container">
+      <div class="category-pills">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="roasted">Roasted</button>
+        <button class="pill" data-filter="fresh">Fresh / Unroasted</button>
+        <button class="pill" data-filter="parts">Parts & Pieces</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Menu</h2>
+        <p>Choose roasted for ready-to-eat or fresh for cooking at home. All birds are 100% Halal slaughtered.</p>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <!-- Items injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how section" id="how">
+    <div class="container">
+      <div class="section-header">
+        <h2>How to Order</h2>
+        <p>Simple, fast, and reliable — just like the best delivery apps.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Pick your chicken</h3>
+          <p>Browse roasted or fresh options and add to cart.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Confirm details</h3>
+          <p>Share delivery address, preferred time, and any notes.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Track & enjoy</h3>
+          <p>We confirm, prepare, and deliver. Pay on delivery or mobile money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Logistics -->
+  <section class="delivery section" id="delivery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Delivery & Logistics</h2>
+        <p>Modern delivery coverage, clear ETAs, and flexible options — the same standards used by leading global platforms.</p>
+      </div>
+
+      <div class="delivery-grid">
+        <div class="delivery-card">
+          <div class="delivery-icon">📍</div>
+          <h3>Delivery Zones</h3>
+          <p>We currently serve Kayunga, Wakiso town council and nearby areas including Kasangombe-mpunga.</p>
+          <ul class="zone-list">
+            <li><strong>Core zone</strong> — Kasangombe & nearby · 30–50 min</li>
+            <li><strong>Extended</strong> — Wider Wakiso / Kayunga · 50–80 min</li>
+          </ul>
+        </div>
+
+        <div class="delivery-card">
+          <div class="delivery-icon">⏱️</div>
+          <h3>Estimated Times</h3>
+          <p>Realistic ETAs based on distance and order volume, similar to Uber Eats & Glovo.</p>
+          <ul class="zone-list">
+            <li>Roasted chicken ready faster (already cooked)</li>
+            <li>Fresh orders may need short preparation</li>
+            <li>You’ll get a clear time window on confirmation</li>
+          </ul>
+        </div>
+
+        <div class="delivery-card">
+          <div class="delivery-icon">🚚</div>
+          <h3>Order Options</h3>
+          <p>Flexible fulfilment to match how you want to receive your chicken.</p>
+          <ul class="zone-list">
+            <li><strong>Delivery</strong> — Hot to your door</li>
+            <li><strong>Pickup</strong> — Collect from the shop</li>
+            <li><strong>Schedule later</strong> — Tell us preferred time</li>
+          </ul>
+        </div>
+
+        <div class="delivery-card">
+          <div class="delivery-icon">📦</div>
+          <h3>Order Status Flow</h3>
+          <p>Clear progress from confirmation to delivery, the way modern platforms work.</p>
+          <div class="status-flow">
+            <span>Confirmed</span>
+            <span>→</span>
+            <span>Preparing</span>
+            <span>→</span>
+            <span>Out for delivery</span>
+            <span>→</span>
+            <span>Delivered</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-note">
+        <strong>How we confirm:</strong> After you send your order on WhatsApp we reply with estimated arrival, any delivery fee (if applicable), and a simple status update until the chicken reaches you.
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <div class="halal-badge large">حلال</div>
+        <h2>Local Halal Chicken You Can Trust</h2>
+        <p>We are a dedicated Halal butcher and poultry supplier based in Kasangombe-mpunga, Wakiso town council, serving the Kayunga area and surroundings.</p>
+        <p>Every bird is slaughtered according to Islamic guidelines. We offer both ready-roasted chicken (perfect for events and quick meals) and fresh unroasted chicken for home cooking.</p>
+        <ul class="features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            100% Halal certified process
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Fresh daily from local sources
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Roasted on-site for maximum flavour
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Delivery across Kayunga & Wakiso
+          </li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Fresh roasted chicken" loading="lazy" />
+          <div class="about-card-overlay">
+            <span>Fresh from the grill</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Location -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find Us & Order</h2>
+        <p>Visit the shop or order for delivery.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <p>Kasangombe-mpunga, Wakiso town council, Kayunga</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <strong>Call / WhatsApp</strong>
+              <p>
+                <a href="tel:+256705789111">+256 705 789 111</a><br>
+                <a href="tel:+256750447610">+256 750 447 610</a><br>
+                <a href="tel:+256750865712">+256 750 865 712</a>
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:kabiitofaiswal@gmail.com">kabiitofaiswal@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕒</div>
+            <div>
+              <strong>Hours</strong>
+              <p>Open daily · Check Google for live status</p>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a href="https://wa.me/256705789111" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Order
+            </a>
+            <a href="tel:+256705789111" class="btn btn-outline">Call Now</a>
+            <a href="mailto:kabiitofaiswal@gmail.com" class="btn btn-outline">Email Us</a>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <p>Kasangombe-mpunga</p>
+            <p class="map-sub">Wakiso · Kayunga</p>
+            <a href="https://maps.google.com/?q=Kasangombe-mpunga+Wakiso+Kayunga" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Open in Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="halal-badge">حلال</span>
+        <div>
+          <strong>Halal Chicken Supply</strong>
+          <p>Fresh & roasted Halal chicken · Kayunga</p>
+          <p style="margin-top:4px;font-size:0.85rem;opacity:0.8"><a href="mailto:kabiitofaiswal@gmail.com" style="color:inherit">kabiitofaiswal@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/256705789111" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="copyright">© 2026 Halal Chicken Supply. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256705789111" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty. Add some chicken!</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">UGX 0</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Checkout via WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
